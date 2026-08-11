@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VOSS • Dashboard</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <style>
+
+    *{
+      font-family: 'Inter', sans-serif;
+    }
+
+    body{
+      background: #f6f6f7;
+    }
+
+  </style>
+
+</head>
+
+<body class="flex min-h-screen">
+
+<!-- SIDEBAR -->
+<aside class="w-72 bg-white border-r border-gray-200 p-8">
+
+  <h1 class="text-4xl font-black text-[#8B6B4A] mb-14">
+    VOSS
+  </h1>
+
+  <nav class="space-y-4">
+
+    <a href="#"
+       class="flex items-center gap-4
+              bg-[#8B6B4A]
+              text-white
+              p-4 rounded-[24px]">
+
+      <i class="fa-solid fa-chart-line"></i>
+      Dashboard
+
+    </a>
+
+    <a href="#usuarios"
+       class="flex items-center gap-4
+              hover:bg-[#f5f5f5]
+              p-4 rounded-[24px] transition">
+
+      <i class="fa-solid fa-users"></i>
+      Usuários
+
+    </a>
+
+    <a href="#modulos"
+       class="flex items-center gap-4
+              hover:bg-[#f5f5f5]
+              p-4 rounded-[24px] transition">
+
+      <i class="fa-solid fa-layer-group"></i>
+      Módulos
+
+    </a>
+
+    <a href="#perfis"
+       class="flex items-center gap-4
+              hover:bg-[#f5f5f5]
+              p-4 rounded-[24px] transition">
+
+      <i class="fa-solid fa-user-shield"></i>
+      Perfis
+
+    </a>
+
+  </nav>
+
+</aside>
+
+<!-- CONTEÚDO -->
+<main class="flex-1 p-10">
+
+  <!-- TOPO -->
+  <div class="flex items-center justify-between mb-10">
+
+    <div>
+
+      <h1 class="text-5xl font-black text-gray-900">
+        Painel Administrativo
+      </h1>
+
+      <p class="text-gray-500 mt-3">
+        Controle de usuários, módulos e permissões.
+      </p>
+
+    </div>
+
+    <!-- PERFIL -->
+    <div class="bg-white border border-gray-200
+                rounded-[24px]
+                px-6 py-4 flex items-center gap-4">
+
+      <div>
+
+        <h2 class="font-bold text-gray-800">
+          Caterine Pimentel
+        </h2>
+
+        <p class="text-sm text-[#8B6B4A]">
+          Perfil: Gerente
+        </p>
+
+      </div>
+
+      <div class="w-14 h-14 rounded-full bg-[#8B6B4A]
+                  text-white flex items-center justify-center">
+
+        C
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- USUÁRIOS -->
+  <section id="usuarios"
+           class="bg-white rounded-[35px]
+                  p-10 mb-10 shadow-sm">
+
+    <div class="flex items-center justify-between mb-8">
+
+      <h2 class="text-3xl font-black">
+        Configuração de Usuários
+      </h2>
+
+      <button class="bg-[#8B6B4A]
+                     text-white
+                     px-6 py-3 rounded-[18px]">
+
+        Novo Usuário
+
+      </button>
+
+    </div>
+
+    <table class="w-full">
+
+      <thead>
+
+      <tr class="text-left text-gray-400 border-b">
+
+        <th class="pb-5">Nome</th>
+        <th class="pb-5">Perfil</th>
+        <th class="pb-5">Status</th>
+        <th class="pb-5">Ações</th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <tr class="border-b">
+
+        <td class="py-6">Ana Souza</td>
+
+        <td class="py-6">
+          Gerente
+        </td>
+
+        <td class="py-6">
+          Ativo
+        </td>
+
+        <td class="py-6 flex gap-3">
+
+          <button class="bg-[#f5f5f5]
+                         px-4 py-2 rounded-xl">
+
+            Editar
+
+          </button>
+
+          <button class="bg-red-100 text-red-600
+                         px-4 py-2 rounded-xl">
+
+            Desativar
+
+          </button>
+
+        </td>
+
+      </tr>
+
+      </tbody>
+
+    </table>
+
+  </section>
+
+  <!-- MÓDULOS -->
+  <section id="modulos"
+           class="bg-white rounded-[35px]
+                  p-10 mb-10 shadow-sm">
+
+    <div class="flex items-center justify-between mb-8">
+
+      <h2 class="text-3xl font-black">
+        Configuração de Módulos
+      </h2>
+
+      <button class="bg-[#8B6B4A]
+                     text-white
+                     px-6 py-3 rounded-[18px]">
+
+        Novo Módulo
+
+      </button>
+
+    </div>
+
+    <div class="grid grid-cols-3 gap-6">
+
+      <!-- CARD -->
+      <div class="bg-[#faf7f5]
+                  rounded-[28px]
+                  p-6">
+
+        <h3 class="text-2xl font-bold mb-3">
+          Financeiro
+        </h3>
+
+        <p class="text-gray-500 mb-6">
+          Acesso: Gerente e Admin
+        </p>
+
+        <div class="flex gap-3">
+
+          <button class="bg-white px-4 py-2 rounded-xl">
+            Editar
+          </button>
+
+          <button class="bg-red-100 text-red-600
+                         px-4 py-2 rounded-xl">
+
+            Desativar
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PERFIS -->
+  <section id="perfis"
+           class="bg-white rounded-[35px]
+                  p-10 shadow-sm">
+
+    <div class="flex items-center justify-between mb-8">
+
+      <div>
+
+        <h2 class="text-3xl font-black">
+          Configuração de Perfil
+        </h2>
+
+        <p class="text-gray-500 mt-2">
+          Controle de permissões por perfil.
+        </p>
+
+      </div>
+
+      <button class="bg-[#8B6B4A]
+                     text-white
+                     px-6 py-3 rounded-[18px]">
+
+        Novo Perfil
+
+      </button>
+
+    </div>
+
+    <!-- PERFIL -->
+    <div class="mb-8">
+
+      <label class="block mb-3 font-semibold">
+        Selecionar Perfil
+      </label>
+
+      <select class="w-full h-16 bg-[#f6f6f6]
+                     rounded-[20px]
+                     px-5 outline-none">
+
+        <option>Gerente</option>
+        <option>Administrador</option>
+        <option>Vendedor</option>
+        <option>Atendente</option>
+
+      </select>
+
+    </div>
+
+    <!-- TABELA -->
+    <table class="w-full">
+
+      <thead>
+
+      <tr class="border-b text-gray-400">
+
+        <th class="text-left pb-5">
+          Módulo
+        </th>
+
+        <th class="pb-5">
+          Visualizar
+        </th>
+
+        <th class="pb-5">
+          Editar
+        </th>
+
+        <th class="pb-5">
+          Excluir
+        </th>
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+      <!-- FINANCEIRO -->
+      <tr class="border-b">
+
+        <td class="py-6 font-semibold">
+          Financeiro
+        </td>
+
+        <td class="text-center">
+          <input type="checkbox" checked
+                 class="w-5 h-5 accent-[#8B6B4A]">
+        </td>
+
+        <td class="text-center">
+          <input type="checkbox" checked
+                 class="w-5 h-5 accent-[#8B6B4A]">
+        </td>
+
+        <td class="text-center">
+          <input type="checkbox" checked
+                 class="w-5 h-5 accent-[#8B6B4A]">
+        </td>
+
+      </tr>
+
+      <!-- ESTOQUE -->
+      <tr class="border-b">
+
+        <td class="py-6 font-semibold">
+          Estoque
+        </td>
+
+        <td class="text-center">
+          <input type="checkbox" checked
+                 class="w-5 h-5 accent-[#5f88b2]">
+        </td>
+
+        <td class="text-center">
+          <input type="checkbox" checked
+                 class="w-5 h-5 accent-[#5f88b2]">
+        </td>
+
+        <td class="text-center">
+          <input type="checkbox"
+                 class="w-5 h-5 accent-[#5f88b2]">
+        </td>
+
+      </tr>
+
+      <!-- ATENDIMENTO -->
+      <tr>
+
+        <td class="py-6 font-semibold">
+          Atendimento
+        </td>
+
+        <td class="text-center">
+          <input type="checkbox" checked
+                 class="w-5 h-5 accent-[#d68aa1]">
+        </td>
+
+        <td class="text-center">
+          <input type="checkbox"
+                 class="w-5 h-5 accent-[#d68aa1]">
+        </td>
+
+        <td class="text-center">
+          <input type="checkbox"
+                 class="w-5 h-5 accent-[#d68aa1]">
+        </td>
+
+      </tr>
+
+      </tbody>
+
+    </table>
+
+    <div class="flex justify-end mt-8">
+
+      <button class="bg-[#8B6B4A]
+                     text-white
+                     px-10 py-4 rounded-[20px]">
+
+        Salvar Permissões
+
+      </button>
+
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>

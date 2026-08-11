@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VOSS • Usuários</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+body{
+background:#f6f6f7;
+font-family:'Inter',sans-serif;
+}
+
+</style>
+
+</head>
+
+<body class="flex">
+
+<!-- SIDEBAR -->
+<aside class="w-72 min-h-screen bg-[#1c1c1c] text-white p-8">
+
+<h1 class="text-5xl font-black text-[#c7a17a] mb-14">
+VOSS
+</h1>
+
+<nav class="space-y-4">
+
+<a href="gerente.html"
+class="flex items-center gap-4 hover:bg-[#2a2a2a] p-4 rounded-[20px]">
+<i class="fa-solid fa-crown"></i>
+Painel Gerente
+</a>
+
+<a href="usuarios.html"
+class="flex items-center gap-4 bg-[#8B6B4A] p-4 rounded-[20px]">
+<i class="fa-solid fa-users"></i>
+Usuários
+</a>
+
+<a href="modulos.html"
+class="flex items-center gap-4 hover:bg-[#2a2a2a] p-4 rounded-[20px]">
+<i class="fa-solid fa-layer-group"></i>
+Módulos
+</a>
+
+<a href="perfis.html"
+class="flex items-center gap-4 hover:bg-[#2a2a2a] p-4 rounded-[20px]">
+<i class="fa-solid fa-user-shield"></i>
+Perfis
+</a>
+
+<a href="financeiro.html"
+class="flex items-center gap-4 hover:bg-[#2a2a2a] p-4 rounded-[20px]">
+<i class="fa-solid fa-coins"></i>
+Financeiro
+</a>
+
+</nav>
+
+</aside>
+
+<!-- MAIN -->
+<main class="flex-1 p-10">
+
+<div class="flex items-center justify-between mb-10">
+
+<div>
+
+<h1 class="text-5xl font-black">
+Configuração de Usuários
+</h1>
+
+<p class="text-gray-500 mt-3">
+Gerencie usuários do sistema.
+</p>
+
+</div>
+
+<button class="bg-[#8B6B4A] text-white px-6 py-4 rounded-[20px]">
+Novo Usuário
+</button>
+
+</div>
+
+<div class="bg-white rounded-[35px] p-10 shadow-sm">
+
+<table class="w-full">
+
+<thead>
+
+<tr class="border-b text-gray-400">
+
+<th class="text-left pb-5">Nome</th>
+<th class="text-left pb-5">Perfil</th>
+<th class="text-left pb-5">Status</th>
+<th class="text-left pb-5">Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr class="border-b">
+
+<td class="py-6">Kauã</td>
+<td>Gerente</td>
+<td>
+<span class="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm">
+Ativo
+</span>
+</td>
+
+<td class="flex gap-3 py-4">
+
+<button class="bg-gray-100 px-4 py-2 rounded-xl">
+Editar
+</button>
+
+<button class="bg-red-100 text-red-600 px-4 py-2 rounded-xl">
+Desativar
+</button>
+
+</td>
+
+</tr>
+
+<tr class="border-b">
+
+<td class="py-6">Ana</td>
+<td>Administrador</td>
+<td>
+<span class="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm">
+Ativo
+</span>
+</td>
+
+<td class="flex gap-3 py-4">
+
+<button class="bg-gray-100 px-4 py-2 rounded-xl">
+Editar
+</button>
+
+<button class="bg-red-100 text-red-600 px-4 py-2 rounded-xl">
+Desativar
+</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td class="py-6">Carlos</td>
+<td>Vendedor</td>
+<td>
+<span class="bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm">
+Inativo
+</span>
+</td>
+
+<td class="flex gap-3 py-4">
+
+<button class="bg-gray-100 px-4 py-2 rounded-xl">
+Editar
+</button>
+
+<button class="bg-green-100 text-green-700 px-4 py-2 rounded-xl">
+Ativar
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</main>
+
+</body>
+</html>

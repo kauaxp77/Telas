@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VOSS • Área do Vendedor</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+body{
+background:#fff7fa;
+font-family:'Inter',sans-serif;
+}
+
+.card{
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+</style>
+
+</head>
+
+<body class="flex">
+
+<!-- SIDEBAR -->
+<aside class="w-72 min-h-screen bg-[#f5dfe6] p-8">
+
+<h1 class="text-5xl font-black text-[#d68aa1] mb-14">
+VOSS
+</h1>
+
+<nav class="space-y-4">
+
+<a href="painel-vendedor.html"
+class="block bg-[#d68aa1] text-white p-4 rounded-[20px]">
+
+Dashboard
+
+</a>
+
+<a href="clientes.html"
+class="block bg-white p-4 rounded-[20px] hover:bg-[#ffeef3]">
+
+Clientes
+
+</a>
+
+<a href="vendas.html"
+class="block bg-white p-4 rounded-[20px] hover:bg-[#ffeef3]">
+
+Vendas
+
+</a>
+
+<a href="metas.html"
+class="block bg-white p-4 rounded-[20px] hover:bg-[#ffeef3]">
+
+Metas do Mês
+
+</a>
+
+</nav>
+
+</aside>
+
+<!-- CONTEÚDO -->
+<main class="flex-1 p-10">
+
+<!-- TOPO -->
+<div class="flex items-center justify-between mb-10">
+
+<div>
+
+<h1 class="text-5xl font-black mb-3">
+Olá, Vendedor
+</h1>
+
+<p class="text-gray-500">
+Painel de gerenciamento de clientes e vendas.
+</p>
+
+</div>
+
+<div class="bg-white px-8 py-5 rounded-[25px] shadow-sm">
+
+<p class="text-gray-400 text-sm mb-2">
+Total de vendas
+</p>
+
+<h2 class="text-4xl font-black text-[#d68aa1]">
+R$ 128.900
+</h2>
+
+</div>
+
+</div>
+
+<!-- CARDS -->
+<div class="grid md:grid-cols-3 gap-8 mb-10">
+
+<div class="bg-white p-8 rounded-[30px] shadow-sm card">
+
+<p class="text-gray-400 text-sm mb-3">
+Clientes cadastrados
+</p>
+
+<h2 class="text-5xl font-black text-[#d68aa1] mb-4">
+128
+</h2>
+
+<p class="text-gray-500">
+Total de clientes ativos na plataforma.
+</p>
+
+</div>
+
+<div class="bg-white p-8 rounded-[30px] shadow-sm card">
+
+<p class="text-gray-400 text-sm mb-3">
+Meta do mês
+</p>
+
+<h2 class="text-5xl font-black text-[#d68aa1] mb-4">
+75%
+</h2>
+
+<div class="w-full h-4 bg-[#f3f3f3] rounded-full overflow-hidden">
+
+<div class="h-full bg-[#d68aa1] w-[75%]"></div>
+
+</div>
+
+<p class="text-gray-500 mt-4">
+R$ 75.000 de R$ 100.000 atingidos.
+</p>
+
+</div>
+
+<div class="bg-white p-8 rounded-[30px] shadow-sm card">
+
+<p class="text-gray-400 text-sm mb-3">
+Pedidos realizados
+</p>
+
+<h2 class="text-5xl font-black text-[#d68aa1] mb-4">
+49
+</h2>
+
+<p class="text-gray-500">
+Pedidos concluídos este mês.
+</p>
+
+</div>
+
+</div>
+
+<!-- CLIENTES -->
+<div class="bg-white p-10 rounded-[35px] shadow-sm mb-10">
+
+<div class="flex items-center justify-between mb-8">
+
+<h2 class="text-3xl font-black text-[#d68aa1]">
+Clientes
+</h2>
+
+<button class="bg-[#d68aa1]
+text-white
+px-6 py-3
+rounded-[18px]">
+
+Novo Cliente
+
+</button>
+
+</div>
+
+<div class="overflow-x-auto">
+
+<table class="w-full">
+
+<thead>
+
+<tr class="text-left text-gray-400 border-b">
+
+<th class="pb-4">Cliente</th>
+<th class="pb-4">Última Compra</th>
+<th class="pb-4">Valor</th>
+<th class="pb-4">Status</th>
+
+</tr>
+
+</thead>
+
+<tbody class="text-gray-600">
+
+<tr class="border-b">
+
+<td class="py-5 font-semibold">
+Ana Rodrigues
+</td>
+
+<td>
+Hermès Birkin
+</td>
+
+<td>
+R$ 267.900
+</td>
+
+<td>
+<span class="bg-green-100
+text-green-700
+px-4 py-2 rounded-full text-sm">
+
+Concluído
+
+</span>
+</td>
+
+</tr>
+
+<tr class="border-b">
+
+<td class="py-5 font-semibold">
+Marina Souza
+</td>
+
+<td>
+Hermès Kelly
+</td>
+
+<td>
+R$ 229.870
+</td>
+
+<td>
+<span class="bg-yellow-100
+text-yellow-700
+px-4 py-2 rounded-full text-sm">
+
+Pendente
+
+</span>
+</td>
+
+</tr>
+
+<tr>
+
+<td class="py-5 font-semibold">
+Juliana Lima
+</td>
+
+<td>
+Hermès Constance
+</td>
+
+<td>
+R$ 440.250
+</td>
+
+<td>
+<span class="bg-green-100
+text-green-700
+px-4 py-2 rounded-full text-sm">
+
+Concluído
+
+</span>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- VENDAS -->
+<div class="bg-white p-10 rounded-[35px] shadow-sm">
+
+<div class="flex items-center justify-between mb-8">
+
+<h2 class="text-3xl font-black text-[#d68aa1]">
+Últimas Vendas
+</h2>
+
+<button class="bg-[#f5dfe6]
+text-[#d68aa1]
+px-6 py-3
+rounded-[18px]">
+
+Ver Relatório
+
+</button>
+
+</div>
+
+<div class="space-y-6">
+
+<div class="flex items-center justify-between bg-[#fff7fa] p-6 rounded-[25px]">
+
+<div>
+
+<h3 class="font-bold text-xl">
+Hermès Birkin
+</h3>
+
+<p class="text-gray-500">
+Venda realizada para Ana Rodrigues
+</p>
+
+</div>
+
+<p class="text-2xl font-black text-[#d68aa1]">
+R$ 267.900
+</p>
+
+</div>
+
+<div class="flex items-center justify-between bg-[#fff7fa] p-6 rounded-[25px]">
+
+<div>
+
+<h3 class="font-bold text-xl">
+Hermès Kelly
+</h3>
+
+<p class="text-gray-500">
+Venda realizada para Marina Souza
+</p>
+
+</div>
+
+<p class="text-2xl font-black text-[#d68aa1]">
+R$ 229.870
+</p>
+
+</div>
+
+<div class="flex items-center justify-between bg-[#fff7fa] p-6 rounded-[25px]">
+
+<div>
+
+<h3 class="font-bold text-xl">
+Hermès Constance
+</h3>
+
+<p class="text-gray-500">
+Venda realizada para Juliana Lima
+</p>
+
+</div>
+
+<p class="text-2xl font-black text-[#d68aa1]">
+R$ 440.250
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</body>
+</html>

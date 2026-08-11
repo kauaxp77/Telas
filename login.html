@@ -1,0 +1,290 @@
+<!-- ========================= -->
+<!-- LOGIN.HTML -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VOSS • Login</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+*{
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#f6f6f7;
+}
+
+</style>
+
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-6">
+
+<div class="w-full max-w-6xl bg-white rounded-[40px] overflow-hidden shadow-2xl grid lg:grid-cols-2">
+
+<!-- LADO ESQUERDO -->
+<div class="bg-[#1c1c1c] text-white p-16 flex flex-col justify-between">
+
+<div>
+
+<p class="uppercase tracking-[6px] text-gray-400 text-sm mb-5">
+Luxury System
+</p>
+
+<h1 class="text-7xl font-black mb-8">
+VOSS
+</h1>
+
+<p class="text-gray-400 text-lg leading-relaxed max-w-md">
+Plataforma premium de gerenciamento interno
+e experiência exclusiva para clientes.
+</p>
+
+</div>
+
+<div class="space-y-5">
+
+<!-- CLIENTE -->
+<div class="bg-[#2a2a2a] rounded-[28px] p-6 flex items-center justify-between">
+
+<div>
+
+<h2 class="text-xl font-bold mb-1">
+Cliente
+</h2>
+
+<p class="text-gray-400 text-sm">
+Área de compras e pedidos
+</p>
+
+</div>
+
+<div class="w-14 h-14 rounded-2xl bg-[#f4e7ea]
+text-[#d68aa1]
+flex items-center justify-center">
+
+<i class="fa-solid fa-bag-shopping"></i>
+
+</div>
+
+</div>
+
+<!-- INTERNO -->
+<div class="bg-[#2a2a2a] rounded-[28px] p-6 flex items-center justify-between">
+
+<div>
+
+<h2 class="text-xl font-bold mb-1">
+Área Interna
+</h2>
+
+<p class="text-gray-400 text-sm">
+Gerente, Admin e Equipe
+</p>
+
+</div>
+
+<div class="w-14 h-14 rounded-2xl bg-[#ece8e4]
+text-[#8B6B4A]
+flex items-center justify-center">
+
+<i class="fa-solid fa-lock"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- LOGIN -->
+<div class="p-16 flex items-center">
+
+<div class="w-full">
+
+<p class="uppercase tracking-[6px]
+text-gray-400 text-sm mb-4">
+
+Bem-vindo
+
+</p>
+
+<h1 class="text-6xl font-black mb-12 text-[#1c1c1c]">
+Entrar
+</h1>
+
+<!-- ERRO -->
+<div id="erro"
+class="hidden bg-red-50 border border-red-200
+text-red-600 rounded-[22px] p-5 mb-8">
+
+Login ou senha incorretos
+
+</div>
+
+<form id="loginForm" class="space-y-6">
+
+<!-- EMAIL -->
+<div>
+
+<label class="block mb-3 font-semibold text-gray-700">
+Email
+</label>
+
+<input
+id="email"
+type="email"
+placeholder="Digite seu email"
+class="w-full h-16 rounded-[22px]
+bg-[#f6f6f6]
+px-5 outline-none focus:ring-2 focus:ring-black"
+/>
+
+</div>
+
+<!-- SENHA -->
+<div>
+
+<label class="block mb-3 font-semibold text-gray-700">
+Senha
+</label>
+
+<input
+id="senha"
+type="password"
+placeholder="Digite sua senha"
+class="w-full h-16 rounded-[22px]
+bg-[#f6f6f6]
+px-5 outline-none focus:ring-2 focus:ring-black"
+/>
+
+</div>
+
+<!-- BOTÃO -->
+<button
+class="w-full h-16 rounded-[22px]
+bg-[#1c1c1c]
+hover:bg-black
+transition
+text-white font-semibold text-lg">
+
+Entrar
+
+</button>
+
+</form>
+
+<!-- CRIAR CONTA -->
+<div class="mt-8 text-center">
+
+<p class="text-gray-500">
+
+Ainda não possui conta?
+
+<a href="cadastro-cliente.html"
+class="font-bold text-[#8B6B4A]">
+
+Criar conta
+
+</a>
+
+</p>
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const form = document.getElementById('loginForm')
+
+form.addEventListener('submit', function(e){
+
+e.preventDefault()
+
+const email = document.getElementById('email').value
+const senha = document.getElementById('senha').value
+
+const erro = document.getElementById('erro')
+
+erro.classList.add('hidden')
+
+
+// CLIENTE
+if(email === 'cliente@voss.com' && senha === '123456'){
+
+window.location.href = 'cliente.html'
+
+}
+
+
+// GERENTE
+else if(email === 'gerente@voss.com' && senha === '123456'){
+
+window.location.href = 'dashboard-gerente.html'
+
+}
+
+
+// ADMIN
+else if(email === 'admin@voss.com' && senha === '123456'){
+
+window.location.href = 'dashboard-admin.html'
+
+}
+
+
+// VENDEDOR
+else if(email === 'vendedor@voss.com' && senha === '123456'){
+
+window.location.href = 'dashboard-vendedor.html'
+
+}
+
+
+// ATENDENTE
+else if(email === 'atendente@voss.com' && senha === '123456'){
+
+window.location.href = 'dashboard-atendente.html'
+
+}
+
+
+// ERRO
+else{
+
+erro.classList.remove('hidden')
+
+}
+
+})
+
+</script>
+
+</body>
+</html>

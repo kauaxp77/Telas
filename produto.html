@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VOSS • Produto</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+*{
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#f7f7f5;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="bg-white border-b border-gray-200">
+
+<div class="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
+
+<a href="colecao.html"
+class="text-4xl font-black text-[#3e3128]">
+
+VOSS
+
+</a>
+
+<a href="carrinho.html"
+class="w-14 h-14 rounded-2xl bg-[#f3f3f3]
+flex items-center justify-center relative">
+
+<i class="fa-solid fa-bag-shopping"></i>
+
+<span id="contador"
+class="absolute -top-2 -right-2
+bg-[#3e3128]
+text-white text-xs
+w-6 h-6 rounded-full
+flex items-center justify-center">
+
+0
+
+</span>
+
+</a>
+
+</div>
+
+</header>
+
+
+<!-- PRODUTO -->
+<section class="py-20 px-8">
+
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
+
+<!-- IMAGEM -->
+<div class="bg-white rounded-[40px] p-10 shadow-sm">
+
+<img
+id="imagem"
+src=""
+class="w-full rounded-[30px]"
+>
+
+</div>
+
+<!-- INFO -->
+<div>
+
+<p class="uppercase tracking-[5px]
+text-gray-400 text-sm mb-5">
+
+Luxury Hermès
+
+</p>
+
+<h1 id="nome"
+class="text-6xl font-black mb-8">
+</h1>
+
+<p id="preco"
+class="text-4xl font-black text-[#3e3128] mb-8">
+</p>
+
+<p class="text-gray-500 text-lg leading-relaxed mb-10">
+
+Bolsa Hermès premium com acabamento sofisticado,
+design luxuoso e detalhes exclusivos.
+
+</p>
+
+<div class="flex gap-5">
+
+<button
+onclick="adicionarCarrinho()"
+class="bg-[#3e3128]
+text-white
+px-10 py-5
+rounded-[22px]
+font-semibold">
+
+Adicionar ao Carrinho
+
+</button>
+
+<a href="colecao.html"
+class="bg-[#ece8e4]
+text-[#3e3128]
+px-10 py-5
+rounded-[22px]
+font-semibold">
+
+Voltar
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const produtos = [
+
+{
+id:1,
+nome:"Hermès Birkin Black",
+preco:"R$ 350.000",
+imagem:"https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200"
+},
+
+{
+id:2,
+nome:"Hermès Kelly Brown",
+preco:"R$ 420.000",
+imagem:"https://images.unsplash.com/photo-1594223274512-ad4803739b7c?q=80&w=1200"
+},
+
+{
+id:3,
+nome:"Hermès Constance White",
+preco:"R$ 510.000",
+imagem:"https://images.unsplash.com/photo-1581605405669-fcdf81165afa?q=80&w=1200"
+}
+
+]
+
+const params = new URLSearchParams(window.location.search)
+
+const id = params.get('id')
+
+const produto = produtos.find(p => p.id == id)
+
+document.getElementById('nome').innerHTML = produto.nome
+document.getElementById('preco').innerHTML = produto.preco
+document.getElementById('imagem').src = produto.imagem
+
+function adicionarCarrinho(){
+
+let carrinho = JSON.parse(localStorage.getItem('carrinho')) || []
+
+carrinho.push(produto)
+
+localStorage.setItem('carrinho', JSON.stringify(carrinho))
+
+atualizarContador()
+
+alert('Produto adicionado ao carrinho')
+
+}
+
+function atualizarContador(){
+
+let carrinho = JSON.parse(localStorage.getItem('carrinho')) || []
+
+document.getElementById('contador').innerHTML = carrinho.length
+
+}
+
+atualizarContador()
+
+</script>
+
+</body>
+</html>
